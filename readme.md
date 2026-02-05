@@ -1,6 +1,6 @@
 ## Local Environment Setup
 
-### Build Docker ROS 2 Image
+### Build Docker Image
 
 1. Navigate to the directory containing the `DOCKERFILE`.
 2. Build the Docker image:
@@ -15,14 +15,19 @@ Example:
 docker build -t env_robot .
 ```
 
-3. Run the Docker container, replacing `<YOUR_CONTAINER_NAME>` and `<YOUR_IMAGENAME`docker run -it
-   --name <YOUR_CONTAINER_NAME>
-   --network host
-   --env="DISPLAY"
-   --env="QT_X11_NO_MITSHM=1"
-   --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw"
-   --volume="<YOUR_PATH>/course_ws:/root/course_ws"
-   <YOUR_IMAGENAME>
+3. Run the Docker container, replacing `<YOUR_CONTAINER_NAME>` and `<YOUR_IMAGENAME`>:
+
+   ```bash
+   docker run -it
+    --name <YOUR_CONTAINER_NAME>
+    --network host
+     --env="DISPLAY"
+     --env="QT_X11_NO_MITSHM=1"
+     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw"
+     --volume="<YOUR_PATH>/course_ws:/root/course_ws"
+     <YOUR_IMAGENAME>
+
+   ```
 
 Example:
 
