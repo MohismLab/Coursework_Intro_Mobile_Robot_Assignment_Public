@@ -1,0 +1,31 @@
+name: env_robot
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+
+  # Core scientific stack
+  - numpy
+  - scipy
+  - matplotlib
+  - scikit-learn
+
+  # 3D / geometry
+  - open3d
+  - trimesh
+
+  # Useful in ICP pipelines (neighbors, kd-trees, etc.)
+  - pybind11
+
+  # Optional but commonly helpful (I/O, notebooks)
+  - pyyaml
+  - tqdm
+
+  # Pip-only packages (conda-forge usually has these too, but pip is safe)
+  - pip:
+      # "transformations" is typically provided by this package name
+      - transformations
+      # alternative widely used: "transforms3d" (handy for rotations)
+      - transforms3d
